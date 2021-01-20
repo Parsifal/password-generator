@@ -20,12 +20,12 @@ export class PasswordGenerator {
     let password = "";
     for (let index = 0; index < this.length; index++) {
       const randomNumber = crypto.randomInt(allSymbols.length);
-      password += allSymbols.substring(randomNumber, randomNumber + 1);
+      password += allSymbols.charAt(randomNumber);
     }
     return password;
   }
 }
 
-const passwords = new PasswordGenerator(16, 64).generatePasswords();
+const passwords = new PasswordGenerator(64, 64).generatePasswords();
 
 fs.writeFile("password.txt", passwords.join("\n"), () => console.log("OK"));
