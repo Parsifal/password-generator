@@ -1,5 +1,5 @@
 import * as crypto from "crypto";
-import fs from "fs";
+import * as fs from "fs";
 
 export class PasswordGenerator {
   private readonly uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
