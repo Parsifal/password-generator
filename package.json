@@ -1,21 +1,11 @@
 {
-  "name": "passwordgenerator",
+  "name": "password-generator",
   "version": "1.0.0",
   "description": "Random password generator",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Parsifal/PasswordGenerator.git"
-  },
+  "repository": "git@github.com:Parsifal/password-generator.git",
   "author": "Parsifal",
   "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/Parsifal/PasswordGenerator/issues"
-  },
-  "homepage": "https://github.com/Parsifal/PasswordGenerator#readme",
   "devDependencies": {
     "@types/node": "^14.14.37"
   }
