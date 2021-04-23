@@ -1,6 +1,6 @@
 # PasswordGenerator
 
-Random password generator
+The algorithm was written for a Wikipedia article about a [random password generator](https://en.wikipedia.org/wiki/Random_password_generator).
 
 ### Authors
 
