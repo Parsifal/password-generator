@@ -6,26 +6,24 @@ export class PasswordGenerator {
   private readonly lowercase = "abcdefghijklmnopqrstuvwxyz";
   private readonly numbers = "0123456789";
   private readonly symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+  private readonly allSymbols = this.uppercase + this.lowercase + this.numbers + this.symbols;
 
-  constructor(private readonly length = 16, private readonly number = 1) {}
-
-  public generatePasswords() {
+  generatePasswords(length = 16, number = 1) {
     const passwords = [];
-    for (let i = 0; i < this.number; i++) passwords.push(this.generatePassword());
+    for (let i = 0; i < number; i++) passwords.push(this.generatePassword(length));
     return passwords;
   }
 
-  public generatePassword() {
-    const allSymbols = this.uppercase + this.lowercase + this.numbers + this.symbols;
+  generatePassword(length = 16) {
     let password = "";
-    for (let index = 0; index < this.length; index++) {
-      const randomNumber = crypto.randomInt(allSymbols.length);
-      password += allSymbols.charAt(randomNumber);
+    for (let index = 0; index < length; index++) {
+      const randomNumber = crypto.randomInt(this.allSymbols.length);
+      password += this.allSymbols.charAt(randomNumber);
     }
     return password;
   }
 }
 
-const passwords = new PasswordGenerator(64, 64).generatePasswords();
+const passwords = new PasswordGenerator().generatePasswords(16, 8);
 
 fs.writeFile("password.txt", passwords.join("\n"), () => console.log("OK"));

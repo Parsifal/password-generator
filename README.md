@@ -10,6 +10,23 @@ Long strings of random characters are difficult for most people to memorize. Mne
 
 The algorithm was written for a Wikipedia article about a [random password generator](https://en.wikipedia.org/wiki/Random_password_generator).
 
+### Example:
+
+```ts
+const passwords = new PasswordGenerator().generatePasswords(16, 8);
+```
+
+|     Passwords     |
+| :---------------: |
+| d(\*&]}M9%wsk}XEP |
+| k<5}wE$zPQnE"WtY  |
+| 8uz,F3da"2\*$~pn+ |
+| \dNj(?/F:%d`S<!\* |
+| 'rV/d=!0.[6@jpse  |
+| Mz#ww=7bYPC/Zm"0  |
+| ;4>IsjIt0oI.iBw/  |
+| ,E]R=NkxMtN>Qgm2  |
+
 ### Authors
 
 - [Parsifal](https://github.com/Parsifal)

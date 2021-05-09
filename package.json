@@ -1,12 +1,11 @@
 {
   "name": "password-generator",
   "version": "1.0.0",
-  "description": "Random password generator",
   "main": "index.js",
   "repository": "git@github.com:Parsifal/password-generator.git",
   "author": "Parsifal",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@types/node": "^15.0.1"
+    "@types/node": "^15.0.2"
   }
 }
