@@ -1,5 +1,5 @@
-import * as crypto from "crypto";
-import * as fs from "fs";
+import { randomInt } from "crypto";
+import { writeFile } from "fs";
 
 export class PasswordGenerator {
   private readonly uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -17,7 +17,7 @@ export class PasswordGenerator {
   generatePassword(length: number = 16): string {
     let password = "";
     for (let index = 0; index < length; index++) {
-      const randomNumber = crypto.randomInt(this.allSymbols.length);
+      const randomNumber = randomInt(this.allSymbols.length);
       password += this.allSymbols.charAt(randomNumber);
     }
     return password;
@@ -26,4 +26,4 @@ export class PasswordGenerator {
 
 const passwords = new PasswordGenerator().generatePasswords(16, 8);
 
-fs.writeFile("password.txt", passwords.join("\n"), () => console.log("OK"));
+writeFile("password.txt", passwords.join("\n"), () => console.log("OK"));
