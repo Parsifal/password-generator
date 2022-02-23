@@ -8,13 +8,13 @@ export class PasswordGenerator {
   private readonly symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
   private readonly allSymbols = this.uppercase + this.lowercase + this.numbers + this.symbols;
 
-  generatePasswords(length = 16, number = 1) {
+  generatePasswords(length: number = 16, number: number = 1): string[] {
     const passwords = [];
     for (let i = 0; i < number; i++) passwords.push(this.generatePassword(length));
     return passwords;
   }
 
-  generatePassword(length = 16) {
+  generatePassword(length: number = 16): string {
     let password = "";
     for (let index = 0; index < length; index++) {
       const randomNumber = crypto.randomInt(this.allSymbols.length);
