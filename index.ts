@@ -2,11 +2,15 @@ import { randomInt } from "crypto";
 import { writeFile } from "fs";
 
 export class PasswordGenerator {
-  private readonly uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  private readonly lowercase = "abcdefghijklmnopqrstuvwxyz";
-  private readonly numbers = "0123456789";
-  private readonly symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-  private readonly allSymbols = this.uppercase + this.lowercase + this.numbers + this.symbols;
+  private readonly upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  private readonly lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  private readonly digits = "0123456789";
+  private readonly minus = "-";
+  private readonly underline = "_";
+  private readonly special = "!\"#$&&'*+,./:;=?@\\^`|~";
+  private readonly brackets = "[]{}()<>";
+  private readonly all =
+    this.upperCase + this.lowerCase + this.digits + this.minus + this.underline + this.special + this.brackets;
 
   generatePasswords(length = 16, number = 1) {
     const passwords = [];
@@ -17,8 +21,8 @@ export class PasswordGenerator {
   generatePassword(length = 16) {
     let password = "";
     for (let index = 0; index < length; index++) {
-      const randomNumber = randomInt(this.allSymbols.length);
-      password += this.allSymbols.charAt(randomNumber);
+      const randomNumber = randomInt(this.all.length);
+      password += this.all.charAt(randomNumber);
     }
     return password;
   }
