@@ -10,6 +10,6 @@ export const secret = (length = 64) => {
   const brackets = "[]{}()<>";
   const all = upperCase + lowerCase + digits + minus + underline + special + brackets;
   let secret = "";
-  for (let size = 0; size < length; size++) secret += all.charAt(randomInt(all.length));
+  for (let index = 0; index < length; index++) secret += all.charAt(randomInt(all.length));
   return secret;
 };
