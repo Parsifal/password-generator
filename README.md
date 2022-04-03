@@ -1,4 +1,4 @@
-# Password generator
+# Secret generator
 
 A random password generator is software program or hardware device that takes input from a random or pseudo-random
 number generator and automatically generates a password. Random passwords can be generated manually, using simple
@@ -26,16 +26,20 @@ a [random password generator](https://en.wikipedia.org/wiki/Random_password_gene
 ### Example:
 
 ```ts
-const passwords = new PasswordGenerator().generatePasswords(16, 8);
+const { secret } = require("secret");
+secret(); // xZ5<y}EAFaJP)H?UK8ii:c5;q`xt6{:G<j^&2z>7pY]M"OuY3/eX[?(1~fHs0dWG
 ```
 
-|     Passwords     |
-| :---------------: |
-| d(\*&]}M9%wsk}XEP |
-| k<5}wE$zPQnE"WtY  |
-| 8uz,F3da"2\*$~pn+ |
-| \dNj(?/F:%d`S<!\* |
-| 'rV/d=!0.[6@jpse  |
-| Mz#ww=7bYPC/Zm"0  |
-| ;4>IsjIt0oI.iBw/  |
-| ,E]R=NkxMtN>Qgm2  |
+More than 1 quadrillion years needed, in order to have a 1% probability of at least one collision.
+
+### A few values to feel the scale:
+
+- Human lifespan: 79 years.
+- Life on Earth will be impossible in ~1.1 billion years.
+- Age of the Earth: ~4.543 billion years.
+- Age of the Universe: ~13.799 billion years.
+
+### The math behind
+
+- [Birthday problem](https://en.wikipedia.org/wiki/Birthday_problem).
+- [Collisions](https://en.wikipedia.org/wiki/Universally_unique_identifier#Collisions).
