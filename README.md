@@ -30,8 +30,6 @@ const { secret } = require("secret");
 secret(); // xZ5<y}EAFaJP)H?UK8ii:c5;q`xt6{:G<j^&2z>7pY]M"OuY3/eX[?(1~fHs0dWG
 ```
 
-More than 1 quadrillion years needed, in order to have a 1% probability of at least one collision.
-
 ### A few values to feel the scale:
 
 - Human lifespan: 79 years.
