@@ -8,8 +8,10 @@ export const secret = (length = 64) => {
   const underLine = "_";
   const special = "!\"#$%&'*+,./:;=?@\\^`|~";
   const brackets = "[]{}()<>";
-  const alphabet = upperCase + lowerCase + digits + minus + underLine + special + brackets;
+  const alphabet =
+    upperCase + lowerCase + digits + minus + underLine + special + brackets;
   let secret = "";
-  for (let index = 0; index < length; index++) secret += alphabet.charAt(randomInt(alphabet.length));
+  for (let index = 0; index < length; index++)
+    secret += alphabet.charAt(randomInt(alphabet.length));
   return secret;
 };
