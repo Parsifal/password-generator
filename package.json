@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Parsifal/secret#readme",
   "devDependencies": {
-    "@types/node": "^18.7.20"
+    "@types/node": "^18.11.18"
   }
 }
